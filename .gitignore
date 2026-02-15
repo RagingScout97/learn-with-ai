@@ -1,0 +1,6 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Optional: uncomment to avoid committing generated Word files (generate on demand)
+# docs/docx/*.docx
