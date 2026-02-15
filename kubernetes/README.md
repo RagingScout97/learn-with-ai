@@ -15,6 +15,8 @@ Structured learning for **Kubernetes fundamentals** and **CKAD preparation**. Le
 - **kubectl** ([install](https://kubernetes.io/docs/tasks/tools/))
 - **Kind** – Kubernetes in Docker ([install](https://kind.sigs.k8s.io/docs/user/quick-start/#installation))
 
+If you have nothing installed yet, start with **Phase 0** in [ROADMAP.md](ROADMAP.md) (what is Kubernetes, installation, project setup).
+
 ## Kind setup
 
 Create a cluster named `learn-k8s`:

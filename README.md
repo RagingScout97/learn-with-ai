@@ -10,6 +10,15 @@ Structured, AI-guided learning: track progress, build real projects, and push ev
 
 Add more later (e.g. `python/`, `devops/`) as top-level folders with their own README and structure.
 
+## Git workflow
+
+- **master:** Holds the full, up-to-date state. All merged work lives here; keep it stable.
+- **Branches:** Use separate branches for tasks and learning projects (e.g. `task/hello-k8s`, `learn/phase1-pods`). Do work on the branch; merge to master when done.
+
+So: master = source of truth; tasks and learning = branch → merge → push.
+
+**Learning:** When working on a track (e.g. Kubernetes), follow that track’s roadmap: [kubernetes/ROADMAP.md](kubernetes/ROADMAP.md) (phases, topic order, 3 questions + 1 task per topic).
+
 ## Document export (MD → Word)
 
 To turn Markdown notes into Word (e.g. from any track’s `docs/md/`):

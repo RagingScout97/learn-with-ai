@@ -4,16 +4,19 @@ Use this to track setup, phases, and document creation. Tick items as you comple
 
 ---
 
-## Setup and workflow
+## Setup and workflow (Phase 0)
 
-- [ ] Kind cluster created (`learn-k8s`)
-- [ ] Repo folders created (including `docs/md/`, `docs/docx/`)
+- [ ] Docker, kubectl, and Kind installed
+- [ ] Kind cluster created (`learn-k8s`) and reachable (`kubectl get nodes`)
+- [ ] Repo folders in place (including `docs/md/`, `docs/docx/`)
+- [ ] First workload applied (e.g. from `02-hello-k8s/` or a minimal Pod) and visible with `kubectl get pods`
 - [ ] [md2docx](https://github.com/RagingScout97/md2docx) tested (convert one `docs/md/*.md` to `docs/docx/*.docx`)
 
 ---
 
 ## Per phase (tick as you finish)
 
+- [ ] Phase 0: Getting started complete; 3 questions answered; practical task (cluster + first apply) done
 - [ ] Phase 1: Core fundamentals complete; 3 questions answered; 1 practical task done
 - [ ] Phase 2: Networking and config complete; 3 questions answered; 1 practical task done
 - [ ] Phase 3: Observability complete; 3 questions answered; 1 practical task done

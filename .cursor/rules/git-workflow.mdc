@@ -1,0 +1,30 @@
+---
+description: Learn with AI repo - git workflow (master + branches), and always follow the learning roadmap
+alwaysApply: true
+---
+
+# Learn with AI – Git workflow & roadmap
+
+## Git workflow
+
+When working in this repo, follow this structure:
+
+- **master (or main):** Holds the full, up-to-date state of the repo. All merged work lives here. Keep it stable and complete.
+- **Separate branches for work:**
+  - **Tasks:** Use a branch per task (e.g. `task/hello-k8s-deployment`, `task/add-python-track`). Do the work on the branch; merge to master when done.
+  - **Learning projects:** Use a branch per learning project or experiment (e.g. `learn/phase1-pods`, `learn/ckad-practice`). Merge to master when the project is ready to keep.
+
+**When the user asks to start work, create a branch or switch to the right branch.** When work is complete, they can merge to master and push. Do not assume everything happens on master; suggest or use a branch for active task/learning work unless they say otherwise.
+
+Remember: master = source of truth; tasks and learning projects = separate branches, then merge.
+
+## Follow the roadmap
+
+**Always follow the learning roadmap** for each track. For Kubernetes, the roadmap is in **kubernetes/ROADMAP.md** (30-day phased plan: Phase 1 Core Fundamentals → Phase 2 Networking & Config → Phase 3 Observability → Phase 4 CKAD Practice). When teaching or suggesting next steps:
+
+- Stick to the **phase order** and **topic order** in the roadmap.
+- Each topic ends with **3 conceptual questions** and **1 practical task**; include them after covering a topic.
+- Teaching style: **explain first, user tries, then solution**; turn theory into **mini projects**; relate to real production scenarios.
+- Use **kubernetes/CHECKLIST.md** for setup and phase completion; suggest updating it as they progress.
+
+Remember this even in new chats: follow the roadmap; don’t skip ahead or reorder unless the user asks.

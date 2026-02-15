@@ -4,6 +4,27 @@ Tick off topics as you complete them. Each topic ends with **3 conceptual questi
 
 ---
 
+## Phase 0: Getting started (Days 0–1)
+
+For anyone with nothing installed yet: understand what Kubernetes is, install the tools, and run your first workload.
+
+| Done | Focus | Topics | Mini project / outcome |
+|------|--------|--------|------------------------|
+| [ ] | **What is Kubernetes?** | Definition; containers vs VMs; orchestration; desired state | Short note in your words: "Kubernetes is …" in `01-architecture/` or `docs/md/` |
+| [ ] | **Containers (minimal)** | Image, container, registry; why we need an orchestrator | Optional: run one container with Docker (`docker run nginx:alpine`) |
+| [ ] | **Installation** | Docker, kubectl, Kind; verify with `kubectl get nodes` | All three installed; cluster `learn-k8s` created and reachable |
+| [ ] | **Project setup** | Repo (this repo); create cluster; first `kubectl apply` | Cluster running; one manifest applied (e.g. from `02-hello-k8s/` or a minimal Pod) |
+
+**Questions to answer (Phase 0):**
+
+- What problem does Kubernetes solve that plain Docker doesn’t?
+- In one sentence, what is "desired state"?
+- What are the three things you installed (Docker, kubectl, Kind) and what is each for?
+
+**Practical task (Phase 0):** Create the Kind cluster, apply one workload (e.g. a single Pod or the hello-k8s Deployment), and show it with `kubectl get pods`.
+
+---
+
 ## Phase 1: Core Fundamentals (Days 1–10)
 
 | Done | Focus | Topics | Mini project / outcome |
@@ -17,7 +38,13 @@ Tick off topics as you complete them. Each topic ends with **3 conceptual questi
 | [ ] | **Imperative vs Declarative** | `kubectl run` vs YAML; when to use which (CKAD) | One resource via CLI, one via YAML |
 | [ ] | **kubectl essentials** | get, describe, logs, exec, port-forward | Cheat sheet in repo; use in every project |
 
-**End of Phase 1:** 3 conceptual questions (e.g. Pod vs Deployment; what ClusterIP does; why we use labels). 1 practical task: *Deploy app in a new namespace and expose it with NodePort; then scale and rollback.*
+**Questions to answer (Phase 1):**
+
+- What is the difference between a Pod and a Deployment?
+- What does a ClusterIP Service do, and when would you use NodePort?
+- Why do we use labels and selectors?
+
+**Practical task (Phase 1):** Deploy app in a new namespace and expose it with NodePort; then scale and rollback.
 
 ---
 
@@ -33,7 +60,13 @@ Tick off topics as you complete them. Each topic ends with **3 conceptual questi
 | [ ] | **Network policies (concept)** | Ingress/egress; default deny (CKAD awareness) | Simple policy: allow only from specific Pod labels |
 | [ ] | **Ingress (concept)** | Host/path routing; Ingress controller (e.g. nginx) | One Ingress with 2 paths to 2 different Services |
 
-**End of Phase 2:** 3 conceptual questions (e.g. ConfigMap vs Secret; QoS; what Headless Service is for). 1 practical task: *Add ConfigMap + Secret to your app; expose via Ingress with two paths.*
+**Questions to answer (Phase 2):**
+
+- When do you use a ConfigMap vs a Secret?
+- What are QoS classes and how do requests/limits affect them?
+- What is a Headless Service for?
+
+**Practical task (Phase 2):** Add ConfigMap + Secret to your app; expose via Ingress with two paths.
 
 ---
 
@@ -46,7 +79,13 @@ Tick off topics as you complete them. Each topic ends with **3 conceptual questi
 | [ ] | **Probes in depth** | startup vs readiness vs liveness; failure effects | App that fails readiness; observe traffic and rollout behavior |
 | [ ] | **Resource usage** | top pod/node (metrics-server); requests/limits | Tune requests/limits based on observed usage |
 
-**End of Phase 3:** 3 conceptual questions (e.g. when to use each probe; what events tell you). 1 practical task: *Break the app in 3 ways (image, probe, resource); find cause with events/logs/describe and fix.*
+**Questions to answer (Phase 3):**
+
+- When do you use startup vs readiness vs liveness probes?
+- What do `kubectl get events` and Pod status tell you when something is wrong?
+- How do you debug a Pod that is Pending or CrashLoopBackOff?
+
+**Practical task (Phase 3):** Break the app in 3 ways (image, probe, resource); find cause with events/logs/describe and fix.
 
 ---
 
@@ -59,4 +98,16 @@ Tick off topics as you complete them. Each topic ends with **3 conceptual questi
 | [ ] | **Security context** | runAsNonRoot; readOnlyRootFilesystem (basics) | Pod that runs as non-root and with read-only root |
 | [ ] | **Review & consolidation** | All phases; weak spots | Fix a “broken” cluster YAML bundle; document learnings |
 
-**End of Phase 4:** Full CKAD-style scenario: *From scratch: namespace, Deployment, Service, ConfigMap; scale; rollback; debug one failure.*
+**Questions to answer (Phase 4):**
+
+- When is an imperative `kubectl` command faster than writing YAML (e.g. in the exam)?
+- What is the difference between a Job and a CronJob?
+- Why set securityContext (runAsNonRoot, readOnlyRootFilesystem) on a Pod?
+
+**Practical task (Phase 4):** Full CKAD-style scenario: from scratch: namespace, Deployment, Service, ConfigMap; scale; rollback; debug one failure.
+
+---
+
+## Optional / later
+
+- **Helm:** Package manager for Kubernetes. You install apps from "charts" (templates + values). Used a lot in the wild; CKAD does not require it. Optional step after you’re comfortable with plain YAML and kubectl.
