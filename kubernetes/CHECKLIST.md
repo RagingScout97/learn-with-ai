@@ -8,7 +8,7 @@ Use this to track setup, phases, and document creation. Tick items as you comple
 
 - [ ] Kind cluster created (`learn-k8s`)
 - [ ] Repo folders created (including `docs/md/`, `docs/docx/`)
-- [ ] MD_TO_DOC_convertor tested (convert one `docs/md/*.md` to `docs/docx/*.docx`)
+- [ ] [md2docx](https://github.com/RagingScout97/md2docx) tested (convert one `docs/md/*.md` to `docs/docx/*.docx`)
 
 ---
 
