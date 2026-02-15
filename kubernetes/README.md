@@ -40,6 +40,7 @@ kubectl get nodes
 | `CHECKLIST.md` | Setup, phases, document-export checklist |
 | `docs/md/` | Markdown notes and summaries (source for Word export) |
 | `docs/docx/` | Generated Word documents ([md2docx](https://github.com/RagingScout97/md2docx) output) |
+| `00-getting-started/` | Phase 0: what is Kubernetes, installation, first run |
 | `01-architecture/` | Architecture notes and diagrams |
 | `02-hello-k8s/` | First project: Deployment + Service |
 | `03-pods-and-probes/` | Pods, init containers, probes |

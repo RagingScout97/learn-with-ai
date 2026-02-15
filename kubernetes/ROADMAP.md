@@ -10,7 +10,7 @@ For anyone with nothing installed yet: understand what Kubernetes is, install th
 
 | Done | Focus | Topics | Mini project / outcome |
 |------|--------|--------|------------------------|
-| [ ] | **What is Kubernetes?** | Definition; containers vs VMs; orchestration; desired state | Short note in your words: "Kubernetes is …" in `01-architecture/` or `docs/md/` |
+| [ ] | **What is Kubernetes?** | Definition; containers vs VMs; orchestration; desired state | Short note in your words in `00-getting-started/` or `docs/md/` |
 | [ ] | **Containers (minimal)** | Image, container, registry; why we need an orchestrator | Optional: run one container with Docker (`docker run nginx:alpine`) |
 | [ ] | **Installation** | Docker, kubectl, Kind; verify with `kubectl get nodes` | All three installed; cluster `learn-k8s` created and reachable |
 | [ ] | **Project setup** | Repo (this repo); create cluster; first `kubectl apply` | Cluster running; one manifest applied (e.g. from `02-hello-k8s/` or a minimal Pod) |
