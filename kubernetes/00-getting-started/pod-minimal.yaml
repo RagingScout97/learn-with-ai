@@ -1,0 +1,14 @@
+# Minimal Pod for Phase 0 — first workload to apply
+# Apply from repo root: kubectl apply -f kubernetes/00-getting-started/pod-minimal.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-phase0
+  labels:
+    app: hello-phase0
+spec:
+  containers:
+    - name: nginx
+      image: nginx:alpine
+      ports:
+        - containerPort: 80

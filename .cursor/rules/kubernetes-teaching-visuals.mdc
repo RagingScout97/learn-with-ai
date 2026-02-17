@@ -1,0 +1,15 @@
+---
+description: When teaching Kubernetes, use flow diagrams or images for visualization (learner is new to K8s)
+alwaysApply: true
+---
+
+# Kubernetes teaching – use visuals
+
+The learner is **new to Kubernetes**. When explaining concepts, architecture, or flows:
+
+- **Prefer flow diagrams or images** for visualization when it helps understanding (e.g. control plane vs workers, Pod lifecycle, request path, containers vs VMs).
+- Use **Mermaid** diagrams in markdown (flowcharts, sequence diagrams, block diagrams) when adding content to repo files, so they render in the IDE and on GitHub.
+- For complex or high-level topics (e.g. cluster architecture, networking, rollout), **include a diagram first or right after** the text explanation.
+- Keep diagrams **simple and labeled**; avoid clutter so a beginner can follow.
+
+Apply this in `kubernetes/` notes, READMEs, and when answering K8s questions in chat—offer a diagram or suggest adding one to the docs when it would help.
